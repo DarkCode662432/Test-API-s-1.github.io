@@ -28,7 +28,6 @@ let getUsersAPIs = function () {
   requist.open("GET", "https://jsonplaceholder.typicode.com/users"); // open the API with selected method
   requist.send(); // send the requist
   
-  // 
   requist.onload = () => {
     if(requist.status >= 200 && requist.status < 300 ) {  // if requist's status is succesfully
       // loop users and craete it's UI
