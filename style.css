@@ -129,6 +129,7 @@ section.users-container div.users h4.name
 section.users-container div.users h4.name.active 
 {
   box-shadow: 0px 0px 0px 2px var(--second-color);
+  color: var(--second-color);
 } 
 
 section.users-container div.users h4.name:hover
