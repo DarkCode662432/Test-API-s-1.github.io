@@ -7,6 +7,7 @@ let getPostsAPIs = function (userId) {
   requist.responseType = "json"; // make requist type json
   requist.open("GET", `https://jsonplaceholder.typicode.com/posts?userId=${userId}`); // open the API with selected method
   requist.send(); // send the requist
+  postsSection.innerHTML = "<div class='load'></div>"; // effect load untill requist finish
   
   requist.onload = () => {
     if(requist.status >= 200 && requist.status < 300 && requist.response != null) { // if requist's status is succesfully
@@ -27,6 +28,7 @@ let getUsersAPIs = function () {
   requist.responseType = "json"; // make requist type json
   requist.open("GET", "https://jsonplaceholder.typicode.com/users"); // open the API with selected method
   requist.send(); // send the requist
+  usersSection.innerHTML = "<div class='load'></div>"; // effect load untill requist finish
   
   requist.onload = () => {
     if(requist.status >= 200 && requist.status < 300 ) {  // if requist's status is succesfully

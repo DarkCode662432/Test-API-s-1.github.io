@@ -8,11 +8,13 @@
 2) users
   1- name
     1. user-name
+  2- load effect
 
 3) posts
   1- post
     1. title
     2. content
+  2- load effect
 */
 
 /* start settings =====================================================*/
@@ -154,6 +156,11 @@ section.users-container div.users h4.name span.user-name::before
 {
   content: "#";
 }
+
+section.users-container div.users div.load::after{  
+  width: 70%;
+}
+
 /* end users ==========================================================*/
 
 /* start posts ========================================================*/
@@ -182,6 +189,7 @@ section.posts-container div.posts
   margin: 0 auto;
   row-gap: 30px;
   padding: 30px 0;
+  min-height: 100%;
 }
 
 section.posts-container div.posts div.post
@@ -204,6 +212,14 @@ section.posts-container div.posts div.post p
   margin-top: 5px; 
   color: #333;
 }
+
+section.posts-container div.posts div.load::after{  
+  width: 60%;
+  border-width: 10px;
+}
+
+
+
 
 
 /* end posts ==========================================================*/
