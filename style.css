@@ -1,0 +1,209 @@
+/* 
+================================================
+======= {Documentations of this styling} =======
+================================================
+
+1) main settings
+
+2) users
+  1- name
+    1. user-name
+
+3) posts
+  1- post
+    1. title
+    2. content
+*/
+
+/* start settings =====================================================*/
+:root 
+{
+  --main-color1: #6153CC;
+  --main-color2: #FDFCFC;
+  --second-color: #4FB477;
+}
+
+*
+{
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  transition: 0.4s all ease-in-out;
+}
+
+body
+{
+  display: flex;
+  flex-direction: row;
+  background-color: var(--main-color2);
+  min-height: 100vh;
+  padding-left: 30vw;
+}
+
+
+div.load 
+{
+  top: 50%;
+  left: 50%;
+  width: 50%;
+  aspect-ratio: 1/1;
+  position: absolute;
+  transform: translate(-50%, -50%);
+}
+
+div.load::after{  
+  content: "";
+  left: 0;
+  top: 0;
+  width: 80%;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  border: #666 8px solid;
+  border-right-color: transparent;
+  animation: load .5s linear infinite;
+  position: absolute;
+}
+
+@keyframes load {
+  0%{transform: rotate(0deg);}
+  50%{transform: rotate(180deg);}
+  100%{transform: rotate(360deg) ;}
+}
+
+/* end settings =======================================================*/
+
+/* start users ========================================================*/
+section.users-container
+{
+  position: fixed;
+  width: 30vw;
+  background: linear-gradient(to right bottom, var(--main-color1) 2%, #1A1B25);
+  height: 100vh;
+  left: 0;
+  padding: 0px 20px;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  z-index: 500000;
+}
+
+section.users-container h2.title
+{
+  color: white;
+  font-size: 2em;
+  width: 100%;
+  text-align: center;
+  padding: 20px;
+  border-bottom: 1px #eee solid;
+}
+
+section.users-container div.users
+{
+  width: 100%;
+  margin: auto;  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 0;
+  row-gap: 20px;
+}
+
+section.users-container div.users h4.name 
+{
+  background-color: var(--main-color2);
+  border-radius: 20px;
+  padding: 10px 12px;
+  cursor: pointer;
+  width: 100%;
+  position: relative;
+  text-align: start;
+  padding-bottom: 24px;
+  overflow: hidden;
+  box-shadow: 0px 0px 8px -2px #333;
+}
+
+section.users-container div.users h4.name.active 
+{
+  box-shadow: 0px 0px 0px 2px var(--second-color);
+} 
+
+section.users-container div.users h4.name:hover
+{
+  box-shadow: 0px 0px 0px 3px var(--second-color);
+}
+
+section.users-container div.users h4.name span.user-name
+{
+  position: absolute;
+  font-size: 11px;
+  color: #666;
+  font-weight: 700;
+  bottom: 5px;
+  right: 10px;
+}
+
+section.users-container div.users h4.name.active span.user-name
+{
+  color: var(--second-color);
+  opacity: .8;
+}
+
+section.users-container div.users h4.name span.user-name::before
+{
+  content: "#";
+}
+/* end users ==========================================================*/
+
+/* start posts ========================================================*/
+section.posts-container
+{
+  width: 70vw;
+  padding: 0 3%;
+}
+
+section.posts-container h2.title
+{
+  color: black;
+  font-size: 2em;
+  width: 100%;
+  text-align: center;
+  padding: 20px;
+  border-bottom: 1px #333 solid;
+}
+
+section.posts-container div.posts
+{
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  row-gap: 30px;
+  padding: 30px 0;
+}
+
+section.posts-container div.posts div.post
+{
+  background-color: #EEE;
+  padding: 0px 20px 10px 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 8px -2px #333;
+}
+
+section.posts-container div.posts div.post h3 
+{
+  text-align: center;
+  padding: 10px 0;
+  border-bottom: 1px #999 solid;
+}
+
+section.posts-container div.posts div.post p 
+{
+  margin-top: 5px; 
+  color: #333;
+}
+
+
+/* end posts ==========================================================*/
