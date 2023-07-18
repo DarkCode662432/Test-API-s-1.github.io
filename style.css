@@ -50,17 +50,17 @@ div.load
 {
   top: 50%;
   left: 50%;
-  width: 50%;
+  width: 30%;
   aspect-ratio: 1/1;
   position: absolute;
   transform: translate(-50%, -50%);
 }
 
-div.load::after{  
+div.load::after{
   content: "";
   left: 0;
   top: 0;
-  width: 80%;
+  width: 100%;
   aspect-ratio: 1/1;
   border-radius: 50%;
   border: #666 8px solid;
@@ -159,7 +159,7 @@ section.users-container div.users h4.name span.user-name::before
 }
 
 section.users-container div.users div.load::after{  
-  width: 70%;
+  width: 100%;
 }
 
 /* end users ==========================================================*/
@@ -214,13 +214,10 @@ section.posts-container div.posts div.post p
   color: #333;
 }
 
-section.posts-container div.posts div.load::after{  
-  width: 60%;
+section.posts-container div.posts div.load::after
+{  
+  width: 100%;
   border-width: 10px;
 }
-
-
-
-
 
 /* end posts ==========================================================*/
