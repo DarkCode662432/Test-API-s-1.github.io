@@ -9,7 +9,6 @@
   1- name
     1. user-name
   2- load effect
-
 3) posts
   1- post
     1. title
@@ -73,6 +72,10 @@ div.load::after{
   0%{transform: rotate(0deg);}
   50%{transform: rotate(180deg);}
   100%{transform: rotate(360deg) ;}
+}
+
+section.users-container div.users h1.error{  
+  color: red;
 }
 
 /* end settings =======================================================*/
@@ -161,6 +164,7 @@ section.users-container div.users h4.name span.user-name::before
 section.users-container div.users div.load::after{  
   width: 100%;
 }
+
 
 /* end users ==========================================================*/
 
