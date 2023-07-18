@@ -3,7 +3,8 @@ Users Posts
 2. The website was developed using HTML, CSS, and JavaScript. 
 3. It is not a real project, but rather a simple demonstration of how to use APIs.
 4. This project displays a list of users with their names and usernames, and allows the user to select a user to view their posts.
-5. In this project to call the API requist, I used the XMLHttpRequest() class, then I improve it to fetch method
+5. In this project to call the API requist, I used the XMLHttpRequest() class,
+   then I improve it to fetch method, finaly I import it to axios method.
 
 Acknowledgments
 APIs resorce: "https://jsonplaceholder.typicode.com/"
